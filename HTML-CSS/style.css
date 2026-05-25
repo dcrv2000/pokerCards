@@ -1,0 +1,177 @@
+body {
+    background-color: #f5f2eb; /* Un tono beige elegante de fondo */
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.table {
+    display: flex; 
+    gap: 30px; /* El espacio de separación entre cada carta */
+    padding: 10px;
+    justify-content: center; /* Centra todas las cartas en la pantalla */
+}
+
+/* El diseño del rectángulo blanco */
+.card {
+    width: 120px;
+    height: 180px;
+    background-color: white;
+    border-radius: 12px; /* Los bordes redondeados típicos de la baraja */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08); /* Sombrita suave para darle profundidad */
+    position: relative; /* Para posicionar las letras dentro de la carta */
+}
+
+.card-red {
+    color: red;
+}
+
+.card-black {
+    color: black;
+}
+
+.diamond {
+  width: 45px;
+  height: 60px;
+  background-color: currentcolor;
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  margin: 20px;
+}
+
+.heart {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  background-color: currentcolor; 
+  transform: rotate(-45deg);
+  margin: 20px;
+}
+
+.heart::before,
+.heart::after {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-color: currentcolor; 
+  border-radius: 50%; 
+}
+
+.heart::before {
+  top: -16px;
+  left: 0;
+}
+
+.heart::after {
+  top: 0;
+  left: 16px;
+}
+
+.spade {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  background-color: currentcolor;
+  transform: translateY(-8px) rotate(135deg);
+  margin: 20px;
+}
+
+.spade::before,
+.spade::after {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-color: currentcolor;
+  border-radius: 50%;
+}
+
+.spade::before {
+  top: -15px;
+  left: 0;
+}
+
+.spade::after {
+  top: 0;
+  left: 15px;
+}
+
+.spade .stem {
+  position: absolute;
+  transform: rotate(-135deg); 
+  top: -15px;
+  left: 22px;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 25px solid currentcolor;
+}
+
+.club {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  background-color: currentcolor;
+  border-radius: 50%;
+  transform: translateY(-12px);
+  margin: 20px;
+}
+
+.club::before,
+.club::after {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-color: currentcolor;
+  border-radius: 50%;
+}
+
+.club::before {
+  top: 20px;
+  left: -15px;
+}
+
+.club::after {
+  top: 20px;
+  left: 15px;
+}
+
+.club .stem {
+  position: absolute;
+  top: 28px;
+  left: 5px;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 30px solid currentcolor;
+}
+
+.card-face {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+}
+
+.value-top, 
+.value-bottom {
+    position: absolute; 
+    font-family: 'Times New Roman', Times, serif; 
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 1;
+}
+
+.value-top {
+    top: 5px;
+    left: 10px;
+}
+
+.value-bottom {
+    bottom: 5px;
+    right: 10px;
+    transform: rotate(180deg); 
+}
